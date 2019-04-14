@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+*{
+  font-family: "Montserrat",sans-serif, "Arial",sans-serif;
+  vertical-align: middle;
+}
+
+/* Reset CSS */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  cursor: pointer;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+button{
+  cursor: pointer;
+}
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000;
+  font-style:italic;
+  font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select ,button{
+  vertical-align:middle;
+  outline: none;
+}
+
+/* Vars */
+
+$color-gray: #ddd;
+$color-gray-dark: #aaa;
+$color-red: #DD1010;
+$color-white: #fff;
+$font-size-1: 20px;
+$font-size-2: 14px;
+$font-size-3: 12px;
+
+
+
+/* General Classes */
+
+.w-limit{
+  max-width: 556px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Theme CSS */
+
+body{
+  font-size: $font-size-2;
+}
+
+header{
+  border-bottom: 1px solid $color-gray;
+  margin:10px 0 0;
+}
+
+
+#header{
+  padding: 10px 0;
+  & button{
+    background: transparent;
+    border-radius: 4px;
+    border:solid 1px $color-gray;
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+  & #search_box{
+    background: $color-gray;
+    height: 35px;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  & input{
+    background: transparent;
+    border:none;
+    margin: 0;
+    padding:0 5px 0 0;
+    height:100%;
+    outline: none;
+
+  }
+  & .fa-search{
+    color:rgba(0,0,0,.2);
+    padding:0 8px;
+    text-align: center;
+  }
+  & img{
+    width: 50px;
+    vertical-align: middle;
+    border-right: 1px solid $color-gray;
+    padding-right: 5px;
+  }
+
+}
+#filters{
+  margin-bottom: 30px;
+  background: $color-red;
+  color:$color-white;
+  & .filter_button{
+    color: $color-white;
+    margin:10px 5px;
+    display: inline-block;
+    padding:5px 10px;
+    cursor:pointer;
+  &.active{
+    background: $color-white;
+    color:$color-red;
+  }
+  }
+}
+#not_found_links{
+  display: none;
+  background: $color-red;
+  color:#fff;
+  font-size: 20px;
+  align-items:center;
+  justify-content: center;
+  padding:20px;
+  & .text{
+    display: inline-block;
+    margin-left: 10px;
+  }
+  & .fa-search{
+    font-size:100px;
+    display: inline-block;
+  }
+}
+#main_content{
+  & .link{
+    display: flex;
+    margin-bottom: 50px;
+    align-items: flex-start;
+    & .upvote_box {
+      background: transparent;
+      border-radius: 4px;
+      border:solid 1px $color-gray;
+      text-align: center;
+      & button{
+        background: transparent;
+        border:none;
+        color: $color-red;
+        width: 40px;
+        height: 35px;
+        border-bottom: solid 1px $color-gray;
+      }
+      & .upvote_val{
+          font-weight: bold;
+          padding:5px 0;
+          font-size: $font-size-1;
+      }
+    }
+    & .content_box{
+      margin-left: 10px;
+      & .meta_box{
+        & a{
+          color: $color-gray-dark;
+          text-decoration: none;
+          font-size: $font-size-3;
+        }
+        & h2{
+          font-size: $font-size-1;
+          font-weight: normal;
+          margin-bottom:10px;
+        }
+      }
+      & .info_box{
+        font-size: $font-size-3;
+        & .category{
+          display: inline-block;
+          border-radius: 30px;
+          background: $color-red;
+          color:white;
+          text-align: center;
+          padding:10px;
+          min-width: 50px;
+          margin-right: 10px;
+          margin-top: 10px;
+          &.bg_case_study{
+            background: #E6A815;
+          }
+          &.bg_product_design{
+            background: #21B68D;
+          }
+          &.bg_ux_ui{
+            background: #67E615;
+          }
+        }
+        & .user{
+          color: $color-red;
+          border-left: solid 1px $color-gray;
+          padding-left: 10px;
+          margin-right:10px;
+          margin-top: 10px;
+          display: inline-block;
+
+          & .user_name{
+            margin-left: 5px;
+            text-decoration: underline;
+            margin-top: 10px;
+            display: inline-block;
+          }
+        }
+        & .time{
+          border-left: solid 1px $color-gray;
+          padding-left: 10px;
+          margin-right:10px;
+          margin-top: 10px;
+          display: inline-block;
+        }
+        & .comment{
+          border-left: solid 1px $color-gray;
+          padding-left: 10px;
+          margin-right:10px;
+          margin-top: 10px;
+          display: inline-block;
+          & .commnet_text{
+            margin-left: 5px;
+          }
+          & .fa-comment{
+            color:$color-red;
+          }
+        }
+      }
+    }
+  }
+}

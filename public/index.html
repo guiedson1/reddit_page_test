@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -14,182 +14,34 @@
         <button type="button" name="button"><i class="fas fa-bars"></i></button>
         <div id="search_box">
           <i class="fas fa-search"></i>
-          <input type="text" name="" value="">
+          <input id="search_input" type="text" name="" value="">
         </div>
       </div>
     </div>
   </header>
 
-  <div class="w-limit">
+
+    <div id="filters">
+      <div class="w-limit">
+      <span>Order by: </span>
+      <span class="filter_button active" data-filter-type="p" data-filter-order="down-up">Popularity <i class="fas fa-caret-down"></i></span>
+      <span class="filter_button" data-filter-type="c" data-filter-order="up-down">Comments <i class="fas fa-caret-down"></i></span>
+      <span class="filter_button" data-filter-type="d" data-filter-order="up-down">Date <i class="fas fa-caret-down"></i></span>
+    </div>
+    </div>
+    <div class="w-limit">
+    <div id="not_found_links">
+    <i class="fas fa-search"></i>
+    <span class="text">Sorry, <br />no results. <br />Try another search!</span>
+    </div>
+      </div>
+    <div class="w-limit">
     <div id="main_content">
 
-      <div class="link">
-        <div class="upvote_box">
-          <button type="button" name="button">^</button>
-          <div class="upvote_val">9</div>
-        </div>
-        <div class="content_box">
-          <div class="meta_box">
-            <a href="css-tricks.com">css-tricks.com</a>
-            <h2>Font Size Idea: px at Root, rem for Components, em for Text Elements</h2>
-          </div>
-          <div class="info_box">
-            <span class="category">ux_ui</span>
-            <span class="user">
-              <img src="" alt=""><span class="user_name">Danil Ishutin</span>
-            </span>
-            <span class="time">40 minutes ago</span>
-            <span><span>7</span>Comments</span>
-          </div>
-        </div>
-      </div>
-      <div class="link">
-        <div class="upvote_box">
-          <button type="button" name="button">^</button>
-          <div class="upvote_val">9</div>
-        </div>
-        <div class="content_box">
-          <div class="meta_box">
-            <a href="css-tricks.com">css-tricks.com</a>
-            <h2>Font Size Idea: px at Root, rem for Components, em for Text Elements</h2>
-          </div>
-          <div class="info_box">
-            <span class="category">ux_ui</span>
-            <span class="user">
-              <img src="" alt=""><span class="user_name">Danil Ishutin</span>
-            </span>
-            <span class="time">40 minutes ago</span>
-            <span><span>7</span>Comments</span>
-          </div>
-        </div>
-      </div>
-      <div class="link">
-        <div class="upvote_box">
-          <button type="button" name="button">^</button>
-          <div class="upvote_val">9</div>
-        </div>
-        <div class="content_box">
-          <div class="meta_box">
-            <a href="css-tricks.com">css-tricks.com</a>
-            <h2>Font Size Idea: px at Root, rem for Components, em for Text Elements</h2>
-          </div>
-          <div class="info_box">
-            <span class="category">ux_ui</span>
-            <span class="user">
-              <img src="" alt=""><span class="user_name">Danil Ishutin</span>
-            </span>
-            <span class="time">40 minutes ago</span>
-            <span><span>7</span>Comments</span>
-          </div>
-        </div>
-      </div>
-      <div class="link">
-        <div class="upvote_box">
-          <button type="button" name="button">^</button>
-          <div class="upvote_val">9</div>
-        </div>
-        <div class="content_box">
-          <div class="meta_box">
-            <a href="css-tricks.com">css-tricks.com</a>
-            <h2>Font Size Idea: px at Root, rem for Components, em for Text Elements</h2>
-          </div>
-          <div class="info_box">
-            <span class="category">ux_ui</span>
-            <span class="user">
-              <img src="" alt=""><span class="user_name">Danil Ishutin</span>
-            </span>
-            <span class="time">40 minutes ago</span>
-            <span><span>7</span>Comments</span>
-          </div>
-        </div>
-      </div>
-      <div class="link">
-        <div class="upvote_box">
-          <button type="button" name="button">^</button>
-          <div class="upvote_val">9</div>
-        </div>
-        <div class="content_box">
-          <div class="meta_box">
-            <a href="css-tricks.com">css-tricks.com</a>
-            <h2>Font Size Idea: px at Root, rem for Components, em for Text Elements</h2>
-          </div>
-          <div class="info_box">
-            <span class="category">ux_ui</span>
-            <span class="user">
-              <img src="" alt=""><span class="user_name">Danil Ishutin</span>
-            </span>
-            <span class="time">40 minutes ago</span>
-            <span><span>7</span>Comments</span>
-          </div>
-        </div>
-      </div>
-      <div class="link">
-        <div class="upvote_box">
-          <button type="button" name="button">^</button>
-          <div class="upvote_val">9</div>
-        </div>
-        <div class="content_box">
-          <div class="meta_box">
-            <a href="css-tricks.com">css-tricks.com</a>
-            <h2>Font Size Idea: px at Root, rem for Components, em for Text Elements</h2>
-          </div>
-          <div class="info_box">
-            <span class="category">ux_ui</span>
-            <span class="user">
-              <img src="" alt=""><span class="user_name">Danil Ishutin</span>
-            </span>
-            <span class="time">40 minutes ago</span>
-            <span><span>7</span>Comments</span>
-          </div>
-        </div>
-      </div>
-      <div class="link">
-        <div class="upvote_box">
-          <button type="button" name="button">^</button>
-          <div class="upvote_val">9</div>
-        </div>
-        <div class="content_box">
-          <div class="meta_box">
-            <a href="css-tricks.com">css-tricks.com</a>
-            <h2>Font Size Idea: px at Root, rem for Components, em for Text Elements</h2>
-          </div>
-          <div class="info_box">
-            <span class="category">ux_ui</span>
-            <span class="user">
-              <img src="" alt=""><span class="user_name">Danil Ishutin</span>
-            </span>
-            <span class="time">40 minutes ago</span>
-            <span><span>7</span>Comments</span>
-          </div>
-        </div>
-      </div>
-      <div class="link">
-        <div class="upvote_box">
-          <button type="button" name="button">^</button>
-          <div class="upvote_val">9</div>
-        </div>
-        <div class="content_box">
-          <div class="meta_box">
-            <a href="css-tricks.com">css-tricks.com</a>
-            <h2>Font Size Idea: px at Root, rem for Components, em for Text Elements</h2>
-          </div>
-          <div class="info_box">
-            <span class="category">ux_ui</span>
-            <span class="user">
-              <img src="" alt=""><span class="user_name">Danil Ishutin</span>
-            </span>
-            <span class="time">40 minutes ago</span>
-            <span><span>7</span>Comments</span>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
-
-
   <footer>
-
   </footer>
 
   <script type="text/javascript" src="./bundle.js" ></script>
