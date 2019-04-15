@@ -10,40 +10,71 @@
   <header>
     <div class="w-limit">
       <div id="header">
-        <img src="img/brand.png">
-        <button type="button" name="button"><i class="fas fa-bars"></i></button>
-        <div id="search_box">
-          <i class="fas fa-search"></i>
-          <input id="search_input" type="text" name="" value="">
+        <div class="left_block">
+          <img src="img/brand.png">
+          <button type="button" name="button"><i class="fas fa-bars"></i></button>
+          <div id="search_box">
+            <i class="fas fa-search"></i>
+            <input id="search_input" type="text" value="">
+          </div>
+        </div>
+        <div class="right_block">
+          <a href="" class="button">
+            <i class="fa fa-plus"></i>
+            <span class="text">Add Post</span>
+          </a>
+          <img src="img/user.png">
         </div>
       </div>
     </div>
   </header>
 
 
-    <div id="filters">
-      <div class="w-limit">
-      <span>Order by: </span>
-      <span class="filter_button active" data-filter-type="p" data-filter-order="down-up">Popularity <i class="fas fa-caret-down"></i></span>
-      <span class="filter_button" data-filter-type="c" data-filter-order="up-down">Comments <i class="fas fa-caret-down"></i></span>
-      <span class="filter_button" data-filter-type="d" data-filter-order="up-down">Date <i class="fas fa-caret-down"></i></span>
-    </div>
-    </div>
+  <div id="filters">
     <div class="w-limit">
-    <div id="not_found_links">
-    <i class="fas fa-search"></i>
-    <span class="text">Sorry, <br />no results. <br />Try another search!</span>
-    </div>
+      <div class="internal_block">
+        <span>Order by: </span>
+        <span class="filter_button active" data-filter-type="p" data-filter-order="down-up">Popularity <i class="fas fa-caret-down"></i></span>
+        <span class="filter_button" data-filter-type="c" data-filter-order="up-down">Comments <i class="fas fa-caret-down"></i></span>
+        <span class="filter_button" data-filter-type="d" data-filter-order="up-down">Date <i class="fas fa-caret-down"></i></span>
       </div>
-    <div class="w-limit">
+    </div>
+  </div>
+  <div class="w-limit">
+    <div id="not_found_links">
+      <i class="fas fa-search"></i>
+      <span class="text">Sorry, <br />no results. <br />Try another search!</span>
+    </div>
+  </div>
+  <div class="w-limit">
     <div id="main_content">
 
     </div>
   </div>
-
-  <footer>
-  </footer>
-
+  <div class="w-limit">
+    <footer id="footer">
+      <div class="left_block">
+        <img src="img/brand.png">
+        <div class="text">
+          <p><strong>The UX Library</strong></p>
+          <p>Community curated design content & discussion</p>
+        </div>
+      </div>
+      <div class="right_block">
+        <div>
+          <div class="links">
+            <a href="#" class="social"><img src="img/ico-twitter.jpg">Twitter</a>
+            <a href="#" class="social"><img src="img/ico-facebook.jpg">Facebook</a>
+            <i class="fas fa-circle"></i>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Sign in</a>
+          </div>
+          <p>© 2019 - The UX Library - By Guilherme Edson</p>
+        </div>
+      </div>
+    </footer>
+  </div>
   <script type="text/javascript" src="./bundle.js" ></script>
 </body>
 </html>

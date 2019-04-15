@@ -99,36 +99,37 @@ function getLinksFromApi(order="up-down",filter="p"){
 }
 
 
-function createLinkTemplate(data){
-  function convertMS( milliseconds ) {
-    var day = 0, hour = 0, minute = 0, seconds = 0;
-    seconds = Math.floor(milliseconds / 100000);
-    minute = Math.floor(seconds / 60);
-    seconds = seconds % 60;
-    hour = Math.floor(minute / 60);
-    minute = minute % 60;
-    day = Math.floor(hour / 24);
-    hour = hour % 24;
+export function convertMS ( milliseconds ) {
+  var day = 0, hour = 0, minute = 0, seconds = 0;
+  seconds = Math.floor(milliseconds / 100000);
+  minute = Math.floor(seconds / 60);
+  seconds = seconds % 60;
+  hour = Math.floor(minute / 60);
+  minute = minute % 60;
+  day = Math.floor(hour / 24);
+  hour = hour % 24;
 
-    var text_seconds = "second";
-    var text_minute = "minute";
-    var text_hour = "hour";
-    var text_day = "day";
-    text_seconds += (seconds>1)?"s":"";
-    text_minute += (minute>1)?"s":"";
-    text_hour += (hour>1)?"s":"";
-    text_day += (day>1)?"s":"";
+  var text_seconds = "second";
+  var text_minute = "minute";
+  var text_hour = "hour";
+  var text_day = "day";
+  text_seconds += (seconds>1)?"s":"";
+  text_minute += (minute>1)?"s":"";
+  text_hour += (hour>1)?"s":"";
+  text_day += (day>1)?"s":"";
 
-    if(minute == 0 && hour == 0 && day == 0){
-      return `${seconds} ${text_seconds}`;
-    }else if(hour == 0 && day == 0){
-      return `${minute} ${text_minute}`;
-    }else if(day == 0){
-      return `${hour} ${text_hour}`;
-    }else{
-      return `${day} ${text_day}`;
-    }
+  if(minute == 0 && hour == 0 && day == 0){
+    return `${seconds} ${text_seconds}`;
+  }else if(hour == 0 && day == 0){
+    return `${minute} ${text_minute}`;
+  }else if(day == 0){
+    return `${hour} ${text_hour}`;
+  }else{
+    return `${day} ${text_day}`;
   }
+}
+
+function createLinkTemplate(data){
 
   var refactoredTime = "No time";
   if(data.created_at != "" && data.created_at != null){
