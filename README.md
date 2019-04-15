@@ -5,6 +5,7 @@
 - Babel
 - Gulp
 - Webpack
+- Eslint
 - Git
 
 ## Linguagens utilizadas:
