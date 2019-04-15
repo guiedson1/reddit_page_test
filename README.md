@@ -7,6 +7,7 @@
 - Webpack
 - Eslint
 - Git
+- Sass
 
 ## Linguagens utilizadas:
 - HTML

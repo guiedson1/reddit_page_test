@@ -59,11 +59,17 @@ function filterRender() {
 }
 
 function getLinksFromApi(order="up-down",filter="p"){
-  fetch("https://www.mocky.io/v2/5a6bc16631000078341b8b77",{
+  fetch("https://cors-anywhere.herokuapp.com/http://www.mocky.io/v2/5a6bc16631000078341b8b77",{
     method:"GET",
+    headers:{
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+
   }).then(function(response){
     if (response.status !== 200) {
-      alert("Looks like there was a problem. Status Code: " + response.status);
+      console.log("Looks like there was a problem. Status Code: " + response.status);
+      alert("There's a problem. Are you using a actual URL?");
       return;
     }
     return response.json();
@@ -94,7 +100,8 @@ function getLinksFromApi(order="up-down",filter="p"){
       createLinkTemplate(link);
     });
   }).catch(function(error) {
-    alert("Ops. Error: "+error);
+    alert("There's a problem. Are you using a actual URL?");
+    console.log("Ops. Error: "+error);
   });
 }
 
